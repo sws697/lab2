@@ -138,7 +138,7 @@ int main()
 //     char write_msg[BUFFER_SIZE] = "I am Here";
 //     char* read_msg=(char*)malloc((sizeof(char))*BUFFER_SIZE);
 //     strcpy(read_msg, "silly");
-//     printf("%p\n", read_msg);
+//     printf("%p:", read_msg);
 //     printf("%s\n", read_msg);
 //     int fd[2];
 //     int fd2[2];
@@ -178,14 +178,13 @@ int main()
 //     {
 //         close(fd[WRITE_END]);
 //         read(fd[READ_END], read_msg, BUFFER_SIZE);
-//         printf("child recieve:%s\n", read_msg);
+//         printf("%p:child recieve:%s\n", read_msg,read_msg);
 //         strcpy(read_msg, "i AM hERE");
-//         printf("%s", read_msg);
-//         printf(":%p\n", read_msg);
+//         printf("%p:", read_msg);
+//         printf("%s\n", read_msg);
 //         close(fd[READ_END]);
 //         close(fd2[READ_END]);
 //         write(fd2[WRITE_END], read_msg, strlen(read_msg)+1);
-//         printf("%s\n", read_msg);
 //         fflush(stdout);
 //         close(fd2[WRITE_END]);
 //         return 0;

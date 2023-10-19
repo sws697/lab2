@@ -4,13 +4,11 @@
 #include <unistd.h>
 int main(int argc,char* argv[])
 {
-    int count=0;
     int N=atoi(argv[1]);
     pid_t pid;
     while (1)
     {
         pid = fork();
-        count++;
         
         /*fork child process*/
         if (pid == 0)
